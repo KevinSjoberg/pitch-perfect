@@ -27,13 +27,12 @@ class EffectPlayer {
   }
 
 
-  func stop() {
-    audioPlayerNode.stop()
+  func reset() {
     audioEngine.reset()
   }
 
   func playAtRate(rate: Float) {
-    stop()
+    reset()
 
     audioUnitTimePitchNode.rate = rate
 
@@ -41,7 +40,7 @@ class EffectPlayer {
     audioEngine.attachNode(audioUnitTimePitchNode)
 
     audioEngine.connect(audioPlayerNode, to: audioUnitTimePitchNode, format: audioFile.processingFormat)
-    audioEngine.connect(audioUnitTimePitchNode, to: audioEngine.outputNode, format: audioFile.processingFormat)
+    audioEngine.connect(audioUnitTimePitchNode, to: audioEngine.mainMixerNode, format: audioFile.processingFormat)
 
     var error: NSError?
     audioEngine.startAndReturnError(&error)
@@ -55,7 +54,7 @@ class EffectPlayer {
   }
 
   func playAtPitch(pitch: Float) {
-    stop()
+    reset()
 
     audioUnitTimePitchNode.pitch = pitch
 
@@ -63,7 +62,7 @@ class EffectPlayer {
     audioEngine.attachNode(audioUnitTimePitchNode)
 
     audioEngine.connect(audioPlayerNode, to: audioUnitTimePitchNode, format: audioFile.processingFormat)
-    audioEngine.connect(audioUnitTimePitchNode, to: audioEngine.outputNode, format: audioFile.processingFormat)
+    audioEngine.connect(audioUnitTimePitchNode, to: audioEngine.mainMixerNode, format: audioFile.processingFormat)
 
     var error: NSError?
     audioEngine.startAndReturnError(&error)
