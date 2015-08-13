@@ -126,15 +126,6 @@
                                     <action selector="playSlow:" destination="bRc-e9-1wH" eventType="touchUpInside" id="EHe-ew-RbM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXu-fU-Vio">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="fast-iphone">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playFast:" destination="bRc-e9-1wH" eventType="touchUpInside" id="dQ4-Zv-sfN"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0a-Xp-uXf">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="stop-iphone">
@@ -153,15 +144,35 @@
                                     <action selector="playChipmunk:" destination="bRc-e9-1wH" eventType="touchUpInside" id="4Xu-dq-Jk3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJS-lV-bXf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="darthvader-iphone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playDarthvader:" destination="bRc-e9-1wH" eventType="touchUpInside" id="Zdc-HB-gxL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXu-fU-Vio">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="fast-iphone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playFast:" destination="bRc-e9-1wH" eventType="touchUpInside" id="dQ4-Zv-sfN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aNh-IZ-q82" firstAttribute="leading" secondItem="H8l-ds-wQU" secondAttribute="leadingMargin" constant="14" id="74M-ND-BjX">
                                 <variation key="widthClass=compact" constant="14"/>
                             </constraint>
+                            <constraint firstItem="CJS-lV-bXf" firstAttribute="top" secondItem="TXu-fU-Vio" secondAttribute="bottom" constant="25" id="BrO-Oe-411"/>
                             <constraint firstAttribute="centerX" secondItem="g0a-Xp-uXf" secondAttribute="centerX" constant="38" id="IZC-YQ-gVQ">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="CJS-lV-bXf" secondAttribute="trailing" constant="18" id="IcJ-h3-etk"/>
                             <constraint firstItem="t3s-EN-Md4" firstAttribute="leading" secondItem="H8l-ds-wQU" secondAttribute="leading" constant="30" id="OKl-zC-Ike"/>
                             <constraint firstAttribute="trailing" secondItem="TXu-fU-Vio" secondAttribute="trailing" constant="34" id="Q6g-vU-beO"/>
                             <constraint firstItem="t3s-EN-Md4" firstAttribute="top" secondItem="Soy-Iv-sNw" secondAttribute="bottom" constant="50" id="S2E-si-0fc"/>
@@ -177,39 +188,45 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="t3s-EN-Md4"/>
-                                <exclude reference="TXu-fU-Vio"/>
                                 <exclude reference="g0a-Xp-uXf"/>
                                 <exclude reference="aNh-IZ-q82"/>
+                                <exclude reference="CJS-lV-bXf"/>
+                                <exclude reference="TXu-fU-Vio"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="VyU-JW-ZOt"/>
-                                <exclude reference="Q6g-vU-beO"/>
-                                <exclude reference="wgs-Bv-jyv"/>
-                                <exclude reference="74M-ND-BjX"/>
-                                <exclude reference="r5I-gj-aRz"/>
-                                <exclude reference="IZC-YQ-gVQ"/>
-                                <exclude reference="iqv-sz-ael"/>
                                 <exclude reference="OKl-zC-Ike"/>
                                 <exclude reference="S2E-si-0fc"/>
+                                <exclude reference="74M-ND-BjX"/>
+                                <exclude reference="r5I-gj-aRz"/>
+                                <exclude reference="Q6g-vU-beO"/>
+                                <exclude reference="wgs-Bv-jyv"/>
+                                <exclude reference="BrO-Oe-411"/>
+                                <exclude reference="IcJ-h3-etk"/>
+                                <exclude reference="IZC-YQ-gVQ"/>
+                                <exclude reference="iqv-sz-ael"/>
+                                <exclude reference="VyU-JW-ZOt"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="t3s-EN-Md4"/>
-                                <include reference="TXu-fU-Vio"/>
                                 <include reference="g0a-Xp-uXf"/>
                                 <include reference="aNh-IZ-q82"/>
+                                <include reference="CJS-lV-bXf"/>
+                                <include reference="TXu-fU-Vio"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="VyU-JW-ZOt"/>
-                                <include reference="Q6g-vU-beO"/>
-                                <include reference="wgs-Bv-jyv"/>
-                                <include reference="74M-ND-BjX"/>
-                                <include reference="r5I-gj-aRz"/>
-                                <include reference="IZC-YQ-gVQ"/>
-                                <include reference="iqv-sz-ael"/>
                                 <include reference="OKl-zC-Ike"/>
                                 <include reference="S2E-si-0fc"/>
+                                <include reference="74M-ND-BjX"/>
+                                <include reference="r5I-gj-aRz"/>
+                                <include reference="Q6g-vU-beO"/>
+                                <include reference="wgs-Bv-jyv"/>
+                                <include reference="BrO-Oe-411"/>
+                                <include reference="IcJ-h3-etk"/>
+                                <include reference="IZC-YQ-gVQ"/>
+                                <include reference="iqv-sz-ael"/>
+                                <include reference="VyU-JW-ZOt"/>
                             </mask>
                         </variation>
                     </view>
@@ -239,6 +256,7 @@
     </scenes>
     <resources>
         <image name="chipmunk-iphone" width="100" height="100"/>
+        <image name="darthvader-iphone" width="100" height="100"/>
         <image name="fast-iphone" width="100" height="100"/>
         <image name="microphone-iphone" width="100" height="100"/>
         <image name="slow-iphone" width="100" height="100"/>

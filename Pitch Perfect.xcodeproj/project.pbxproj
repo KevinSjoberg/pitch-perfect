@@ -14,8 +14,8 @@
 		DA352B461B6BC08700D38FFB /* Pitch_PerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA352B451B6BC08700D38FFB /* Pitch_PerfectTests.swift */; };
 		DA352B501B6BCDE200D38FFB /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA352B4F1B6BCDE200D38FFB /* images.xcassets */; };
 		DA352B521B6C03EC00D38FFB /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA352B511B6C03EC00D38FFB /* PlaySoundsViewController.swift */; };
-		DA352B561B6C08FA00D38FFB /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA352B551B6C08FA00D38FFB /* movie_quote.mp3 */; };
-		DA832EEF1B7BBCB100E257D8 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA832EEE1B7BBCB100E257D8 /* RecordedAudio.swift */; };
+		DA832EEF1B7BBCB100E257D8 /* AudioRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA832EEE1B7BBCB100E257D8 /* AudioRecording.swift */; };
+		DACDF2B91B7D1B23006866F9 /* EffectPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACDF2B81B7D1B23006866F9 /* EffectPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +40,8 @@
 		DA352B451B6BC08700D38FFB /* Pitch_PerfectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_PerfectTests.swift; sourceTree = "<group>"; };
 		DA352B4F1B6BCDE200D38FFB /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = images.xcassets; path = ../images.xcassets; sourceTree = "<group>"; };
 		DA352B511B6C03EC00D38FFB /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
-		DA352B551B6C08FA00D38FFB /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
-		DA832EEE1B7BBCB100E257D8 /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
+		DA832EEE1B7BBCB100E257D8 /* AudioRecording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecording.swift; sourceTree = "<group>"; };
+		DACDF2B81B7D1B23006866F9 /* EffectPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,8 @@
 				DA352B4F1B6BCDE200D38FFB /* images.xcassets */,
 				DA352B381B6BC08700D38FFB /* LaunchScreen.xib */,
 				DA352B2D1B6BC08700D38FFB /* Supporting Files */,
-				DA832EEE1B7BBCB100E257D8 /* RecordedAudio.swift */,
+				DACDF2B81B7D1B23006866F9 /* EffectPlayer.swift */,
+				DA832EEE1B7BBCB100E257D8 /* AudioRecording.swift */,
 			);
 			path = "Pitch Perfect";
 			sourceTree = "<group>";
@@ -98,7 +99,6 @@
 		DA352B2D1B6BC08700D38FFB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DA352B551B6C08FA00D38FFB /* movie_quote.mp3 */,
 				DA352B2E1B6BC08700D38FFB /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -203,7 +203,6 @@
 			files = (
 				DA352B501B6BCDE200D38FFB /* images.xcassets in Resources */,
 				DA352B351B6BC08700D38FFB /* Main.storyboard in Resources */,
-				DA352B561B6C08FA00D38FFB /* movie_quote.mp3 in Resources */,
 				DA352B3A1B6BC08700D38FFB /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,7 +221,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA832EEF1B7BBCB100E257D8 /* RecordedAudio.swift in Sources */,
+				DA832EEF1B7BBCB100E257D8 /* AudioRecording.swift in Sources */,
+				DACDF2B91B7D1B23006866F9 /* EffectPlayer.swift in Sources */,
 				DA352B321B6BC08700D38FFB /* RecordSoundsViewController.swift in Sources */,
 				DA352B521B6C03EC00D38FFB /* PlaySoundsViewController.swift in Sources */,
 				DA352B301B6BC08700D38FFB /* AppDelegate.swift in Sources */,
