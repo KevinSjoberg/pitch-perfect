@@ -19,13 +19,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    // Set audio session category. This will silence playback audio while
-    // recording.
-    let session = AVAudioSession.sharedInstance()
-    session.setCategory(AVAudioSessionCategoryRecord, error: nil)
-    session.setActive(true, error: nil)
-
-
     // Setup our recorder and use this class as the AVAudioRecorderDelegate
     let docsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
     let filePath = NSURL.fileURLWithPathComponents([docsPath, "voice.wav"])
@@ -53,6 +46,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     recordIndicator.hidden = false
     microphoneButton.enabled = false
     stopRecordingButton.hidden = false
+
+    // Set audio session category. This will silence playback audio while
+    // recording.
+    let session = AVAudioSession.sharedInstance()
+    session.setCategory(AVAudioSessionCategoryRecord, error: nil)
+    session.setActive(true, error: nil)
+
     audioRecorder.record()
   }
 
@@ -62,7 +62,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     stopRecordingButton.hidden = true
     audioRecorder.stop()
 
+    // Restore previous session category and inactivate our audio session.
     let session = AVAudioSession.sharedInstance()
+    session.setCategory(AVAudioSessionCategorySoloAmbient, error: nil)
     session.setActive(false, error: nil)
   }
 
