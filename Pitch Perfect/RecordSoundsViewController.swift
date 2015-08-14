@@ -27,11 +27,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     audioRecorder.delegate = self
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if (segue.identifier == "stopRecording") {
       let recording = sender as! AudioRecording
@@ -73,7 +68,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
   func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
     if (flag) {
       let recording = AudioRecording(fromRecorder: recorder)
-      self.performSegueWithIdentifier("stopRecording", sender: recording)
+      performSegueWithIdentifier("stopRecording", sender: recording)
     } else {
       println("Failed to record audio from user")
     }

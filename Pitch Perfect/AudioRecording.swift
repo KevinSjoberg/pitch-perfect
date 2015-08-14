@@ -9,7 +9,7 @@
 import Foundation
 import AVFoundation
 
-class AudioRecording: NSObject {
+class AudioRecording {
   var title: String?
   var fileURL: NSURL
 
