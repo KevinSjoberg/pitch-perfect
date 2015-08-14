@@ -40,6 +40,13 @@ class EffectPlayer {
     }
   }
 
+  deinit {
+    audioEngine.stop()
+    audioEngine.reset()
+    audioEngine.detachNode(audioPlayerNode)
+    audioEngine.detachNode(audioUnitTimePitchNode)
+  }
+
 
   func stop() {
     audioPlayerNode.stop()
