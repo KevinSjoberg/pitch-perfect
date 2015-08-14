@@ -43,7 +43,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
   // MARK: View actions
 
   @IBAction func recordAudio() {
-    recordIndicator.hidden = false
+    recordIndicator.text = "Recording..."
     microphoneButton.enabled = false
     stopRecordingButton.hidden = false
 
@@ -57,7 +57,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
   }
 
   @IBAction func stopRecording() {
-    recordIndicator.hidden = true
+    recordIndicator.text = "Tap to record"
     microphoneButton.enabled = true
     stopRecordingButton.hidden = true
     audioRecorder.stop()

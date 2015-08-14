@@ -53,12 +53,14 @@ class EffectPlayer {
   }
 
   func playAtRate(rate: Float) {
+    stop()
     audioUnitTimePitchNode.rate  = rate
     audioUnitTimePitchNode.pitch = 1.0
     playRecording()
   }
 
   func playAtPitch(pitch: Float) {
+    stop()
     audioUnitTimePitchNode.rate  = 1.0
     audioUnitTimePitchNode.pitch = pitch
     playRecording()

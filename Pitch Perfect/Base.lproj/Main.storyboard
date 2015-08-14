@@ -26,12 +26,6 @@
                                     <action selector="recordAudio" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TLr-rP-Pi3"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUa-Fx-JUk">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsa-mX-Oke">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="stop-iphone">
@@ -41,13 +35,21 @@
                                     <action selector="stopRecording" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6e6-S8-qeA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUa-Fx-JUk">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="quh-Nz-X0n" secondAttribute="centerX" constant="-0.5" id="0V3-oD-uKe"/>
                             <constraint firstItem="EUa-Fx-JUk" firstAttribute="centerX" secondItem="quh-Nz-X0n" secondAttribute="centerX" id="6eJ-g6-H7x"/>
                             <constraint firstAttribute="centerX" secondItem="dsa-mX-Oke" secondAttribute="centerX" id="PYu-8S-MOr"/>
-                            <constraint firstAttribute="centerY" secondItem="EUa-Fx-JUk" secondAttribute="centerY" constant="-65" id="XzC-YB-SLZ"/>
+                            <constraint firstAttribute="centerY" secondItem="EUa-Fx-JUk" secondAttribute="centerY" constant="-65" id="XzC-YB-SLZ">
+                                <variation key="widthClass=compact" constant="-66.5"/>
+                            </constraint>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dsa-mX-Oke" secondAttribute="bottom" constant="44" id="bbq-EC-Znk"/>
                             <constraint firstAttribute="centerY" secondItem="quh-Nz-X0n" secondAttribute="centerY" id="kJS-PZ-RyX"/>
                             <constraint firstItem="EUa-Fx-JUk" firstAttribute="centerX" secondItem="dsa-mX-Oke" secondAttribute="centerX" constant="-0.25" id="ljR-gA-tr8"/>
@@ -59,8 +61,8 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="quh-Nz-X0n"/>
-                                <exclude reference="EUa-Fx-JUk"/>
                                 <exclude reference="dsa-mX-Oke"/>
+                                <exclude reference="EUa-Fx-JUk"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="bbq-EC-Znk"/>
@@ -77,8 +79,8 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="quh-Nz-X0n"/>
-                                <include reference="EUa-Fx-JUk"/>
                                 <include reference="dsa-mX-Oke"/>
+                                <include reference="EUa-Fx-JUk"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="bbq-EC-Znk"/>
@@ -87,7 +89,7 @@
                                 <exclude reference="ljR-gA-tr8"/>
                                 <include reference="PYu-8S-MOr"/>
                                 <exclude reference="tST-t1-1fb"/>
-                                <include reference="wSP-KG-czl"/>
+                                <exclude reference="wSP-KG-czl"/>
                                 <include reference="0V3-oD-uKe"/>
                                 <include reference="kJS-PZ-RyX"/>
                             </mask>
@@ -126,13 +128,13 @@
                                     <action selector="playSlow:" destination="bRc-e9-1wH" eventType="touchUpInside" id="EHe-ew-RbM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0a-Xp-uXf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXu-fU-Vio">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="stop-iphone">
+                                <state key="normal" image="fast-iphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="stopPlayback:" destination="bRc-e9-1wH" eventType="touchUpInside" id="aVD-LB-oqT"/>
+                                    <action selector="playFast:" destination="bRc-e9-1wH" eventType="touchUpInside" id="dQ4-Zv-sfN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNh-IZ-q82">
@@ -153,13 +155,13 @@
                                     <action selector="playDarthvader:" destination="bRc-e9-1wH" eventType="touchUpInside" id="Zdc-HB-gxL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXu-fU-Vio">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0a-Xp-uXf">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="fast-iphone">
+                                <state key="normal" image="stop-iphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playFast:" destination="bRc-e9-1wH" eventType="touchUpInside" id="dQ4-Zv-sfN"/>
+                                    <action selector="stopPlayback:" destination="bRc-e9-1wH" eventType="touchUpInside" id="aVD-LB-oqT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -188,10 +190,10 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="t3s-EN-Md4"/>
-                                <exclude reference="g0a-Xp-uXf"/>
+                                <exclude reference="TXu-fU-Vio"/>
                                 <exclude reference="aNh-IZ-q82"/>
                                 <exclude reference="CJS-lV-bXf"/>
-                                <exclude reference="TXu-fU-Vio"/>
+                                <exclude reference="g0a-Xp-uXf"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="OKl-zC-Ike"/>
@@ -210,10 +212,10 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="t3s-EN-Md4"/>
-                                <include reference="g0a-Xp-uXf"/>
+                                <include reference="TXu-fU-Vio"/>
                                 <include reference="aNh-IZ-q82"/>
                                 <include reference="CJS-lV-bXf"/>
-                                <include reference="TXu-fU-Vio"/>
+                                <include reference="g0a-Xp-uXf"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="OKl-zC-Ike"/>
@@ -225,7 +227,7 @@
                                 <include reference="BrO-Oe-411"/>
                                 <include reference="IcJ-h3-etk"/>
                                 <include reference="IZC-YQ-gVQ"/>
-                                <include reference="iqv-sz-ael"/>
+                                <exclude reference="iqv-sz-ael"/>
                                 <include reference="VyU-JW-ZOt"/>
                             </mask>
                         </variation>

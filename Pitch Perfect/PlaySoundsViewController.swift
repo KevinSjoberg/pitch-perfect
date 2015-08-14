@@ -16,6 +16,7 @@ class PlaySoundsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    // Setup the correct category for this audio session and activate it
     let session = AVAudioSession.sharedInstance()
     session.setCategory(AVAudioSessionCategoryPlayback, error: nil)
     session.setActive(true, error: nil)
