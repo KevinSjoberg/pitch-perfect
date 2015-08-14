@@ -24,48 +24,41 @@ class EffectPlayer {
     if error != nil {
       println("Failed to create audio file: \(error)")
     }
-  }
 
-
-  func reset() {
-    audioEngine.reset()
-  }
-
-  func playAtRate(rate: Float) {
-    reset()
-
-    audioUnitTimePitchNode.rate = rate
-
-    attachAndConnectNodes()
-    startEngineAndPlay()
-  }
-
-  func playAtPitch(pitch: Float) {
-    reset()
-
-    audioUnitTimePitchNode.pitch = pitch
-
-    attachAndConnectNodes()
-    startEngineAndPlay()
-  }
-
-  private func startEngineAndPlay() {
-    var error: NSError?
-    audioEngine.startAndReturnError(&error)
-
-    if error == nil {
-      audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
-      audioPlayerNode.play()
-    } else {
-      println("Failed to start audio engine: \(error)")
-    }
-  }
-
-  private func attachAndConnectNodes() {
+    // Attach and connect our nodes
     audioEngine.attachNode(audioPlayerNode)
     audioEngine.attachNode(audioUnitTimePitchNode)
 
     audioEngine.connect(audioPlayerNode, to: audioUnitTimePitchNode, format: audioFile.processingFormat)
     audioEngine.connect(audioUnitTimePitchNode, to: audioEngine.mainMixerNode, format: audioFile.processingFormat)
+
+    // Start the audio engine
+    audioEngine.startAndReturnError(&error)
+
+    if error != nil {
+      println("Failed to start audio engine: \(error)")
+    }
+  }
+
+
+  func stop() {
+    audioPlayerNode.stop()
+  }
+
+  func playAtRate(rate: Float) {
+    audioUnitTimePitchNode.rate  = rate
+    audioUnitTimePitchNode.pitch = 1.0
+    playRecording()
+  }
+
+  func playAtPitch(pitch: Float) {
+    audioUnitTimePitchNode.rate  = 1.0
+    audioUnitTimePitchNode.pitch = pitch
+    playRecording()
+  }
+
+  private func playRecording() {
+      audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+      audioPlayerNode.play()
   }
 }

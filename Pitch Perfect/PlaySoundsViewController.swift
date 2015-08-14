@@ -47,6 +47,6 @@ class PlaySoundsViewController: UIViewController {
   }
 
   @IBAction func stopPlayback(sender: UIButton) {
-    effectPlayer.reset()
+    effectPlayer.stop()
   }
 }
